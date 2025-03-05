@@ -1,0 +1,83 @@
+/* 기본 스타일 */
+.navbar {
+    width: 100%;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .menu-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* 데스크탑 메뉴 */
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  .nav-links li {
+    font-size: 16px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-links a:hover {
+    color: gray;
+  }
+  
+  /* 📌 모바일 스타일 (햄버거 메뉴) */
+  @media (max-width: 768px) {
+    .menu-button {
+      display: block;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background: white;
+      width: 100%;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 16px 0;
+    }
+  
+    .nav-links.open {
+      display: flex;
+    }
+  
+    .nav-links li {
+      padding: 12px 0;
+    }
+  }
+  
