@@ -2,6 +2,7 @@
   "name": "aube_3floor",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://aubestudios.cafe24.com/nilstudio",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
