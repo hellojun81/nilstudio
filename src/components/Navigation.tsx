@@ -17,7 +17,7 @@ const Navigation: React.FC<NavigationProps> = ({ isMobile = false, menuOpen = fa
         </button>
       ) : (
         <ul style={{ display: "flex", gap: "15px", listStyle: "none", padding: 0, margin: 0 }}>
-          {["Space", "Guide", "Equipment", "Archives", "Location"].map((item) => (
+          {["Space", "Guide", "Equipment", "Schedule","Archives", "Location"].map((item) => (
             <li key={item}>
               <a href={`/nilstudio/#/${item.toLowerCase()}`} style={{ color: textColor, textDecoration: "none", fontSize: "1rem" }}>
                 {item}
@@ -29,7 +29,7 @@ const Navigation: React.FC<NavigationProps> = ({ isMobile = false, menuOpen = fa
       {menuOpen && isMobile && (
         <div style={{ position: "absolute", top: "60px", right: "20px", background: "rgba(0,0,0,0.8)", padding: "10px", borderRadius: "5px" }}>
           <ul style={{ listStyle: "none", padding: 0, textAlign: "right", margin: 0 }}>
-            {["Space", "Guide", "Equipment", "Archives", "Location"].map((item) => (
+            {["Space", "Guide", "Equipment", "Schedule","Archives", "Location"].map((item) => (
               <li key={item} style={{ marginBottom: "10px" }}>
                 <a href={`/${item.toLowerCase()}`} style={{ color: "white", textDecoration: "none", fontSize: "1rem" }}>
                   {item}
