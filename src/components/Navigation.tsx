@@ -19,7 +19,7 @@ const Navigation: React.FC<NavigationProps> = ({ isMobile = false, menuOpen = fa
         <ul style={{ display: "flex", gap: "15px", listStyle: "none", padding: 0, margin: 0 }}>
           {["Space", "Guide", "Equipment", "Archives", "Location"].map((item) => (
             <li key={item}>
-              <a href={`/${item.toLowerCase()}`} style={{ color: textColor, textDecoration: "none", fontSize: "1rem" }}>
+              <a href={`/nilstudio/#/${item.toLowerCase()}`} style={{ color: textColor, textDecoration: "none", fontSize: "1rem" }}>
                 {item}
               </a>
             </li>
@@ -77,7 +77,7 @@ const Header: React.FC = () => {
       }}
     >
       <h1 style={{ fontSize: "2rem", fontWeight: "bold", marginLeft: "20px", color: textColor }}>
-        <a href="/" style={{ color: textColor, textDecoration: "none" }}>Nil Studio</a>
+        <a href="/nilstudio/" style={{ color: textColor, textDecoration: "none" }}>Nil Studio</a>
       </h1>
       <Navigation isMobile={isMobile} menuOpen={menuOpen} setMenuOpen={setMenuOpen} textColor={textColor} />
     </header>

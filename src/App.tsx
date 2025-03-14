@@ -9,8 +9,6 @@ import Location from "./pages/Location";
 import Header from "./components/Header";
 import ImageSlider from "./components/ImageSlider"; // ImageSlider를 별도 파일로 분리
 import "./index.css";
-// import "./../assets/styles/Space.css";
-
 
 const App: React.FC = () => {
   const location = useLocation(); // useLocation()은 Router 내부에서만 사용할 수 있음
@@ -19,7 +17,7 @@ const App: React.FC = () => {
     <>
       <Header />
       <Routes>
-        <Route  />
+        <Route path="/" element={<ImageSlider />} /> {/* ✅ 홈 경로 추가 */}
         <Route path="/guide" element={<Guide />} />
         <Route path="/space" element={<Space />} />
         <Route path="/equipment" element={<Equipment />} />
@@ -27,7 +25,6 @@ const App: React.FC = () => {
         <Route path="/archives" element={<Archives />} />
         <Route path="/location" element={<Location />} />
       </Routes>
-      {location.pathname === "/" && <ImageSlider />}
     </>
   );
 };
